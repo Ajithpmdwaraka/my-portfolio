@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-darker text-light overflow-x-hidden;
+}
+
+.glass-card {
+  @apply bg-glass backdrop-blur-md border border-gray-800 rounded-xl;
+}
+
+.neon-border {
+  box-shadow: 0 0 5px theme('colors.primary'), 0 0 10px theme('colors.primary');
+}
+
+.gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary;
+}
+
+.neumorphic {
+  @apply bg-dark rounded-xl;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5),
+              -8px -8px 16px rgba(30, 30, 30, 0.3);
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.section-heading {
+  @apply text-3xl md:text-4xl font-bold mb-8 gradient-text;
+}
+
+.section-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-b from-primary to-secondary rounded-full;
+}
+
+/* Timeline styles */
+.timeline-container {
+  @apply relative;
+}
+
+.timeline-container::after {
+  content: '';
+  @apply absolute top-0 bottom-0 left-1/2 w-0.5 bg-gradient-to-b from-primary to-secondary;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  @apply relative pl-8 md:pl-0 pb-12 last:pb-0;
+}
+
+.timeline-item::before {
+  content: '';
+  @apply absolute z-10 left-0 md:left-1/2 top-0 w-4 h-4 rounded-full bg-secondary border-2 border-primary;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+  .timeline-item:nth-child(odd) {
+    @apply md:pr-12 md:text-right md:ml-auto md:mr-[50%]; /* Fixed */
+  }
+  
+  .timeline-item:nth-child(even) {
+    @apply md:pl-12 md:ml-[50%]; /* Fixed */
+  }
+}
