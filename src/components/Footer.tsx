@@ -6,10 +6,11 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-dark pt-16 pb-8">
+    <footer className="bg-dark py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-gray-800">
-          <div className="md:col-span-2">
+          {/* Brand and Description Section */}
+          <div className="md:col-span-2 text-center md:text-left">
             <Link
               to="hero"
               spy={true}
@@ -20,10 +21,10 @@ const Footer: React.FC = () => {
             >
               John Doe
             </Link>
-            <p className="text-gray-400 mb-6 max-w-md">
+            <p className="text-gray-400 mb-6 max-w-md mx-auto md:mx-0">
               A passionate Full Stack Developer with a focus on creating beautiful, functional, and user-friendly applications.
             </p>
-            <div className="flex gap-4">
+            <div className="flex justify-center md:justify-start gap-4">
               <a 
                 href="https://github.com" 
                 target="_blank" 
@@ -51,73 +52,47 @@ const Footer: React.FC = () => {
             </div>
           </div>
           
-          <div>
+          {/* Quick Links Section */}
+          <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li>
-                <Link
-                  to="about"
-                  spy={true}
-                  smooth="easeInOutQuad"
-                  offset={-70}
-                  duration={300}
-                  className="text-gray-400 hover:text-primary transition-colors cursor-pointer"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="projects"
-                  spy={true}
-                  smooth="easeInOutQuad"
-                  offset={-70}
-                  duration={300}
-                  className="text-gray-400 hover:text-primary transition-colors cursor-pointer"
-                >
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="skills"
-                  spy={true}
-                  smooth="easeInOutQuad"
-                  offset={-70}
-                  duration={300}
-                  className="text-gray-400 hover:text-primary transition-colors cursor-pointer"
-                >
-                  Skills
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="contact"
-                  spy={true}
-                  smooth="easeInOutQuad"
-                  offset={-70}
-                  duration={300}
-                  className="text-gray-400 hover:text-primary transition-colors cursor-pointer"
-                >
-                  Contact
-                </Link>
-              </li>
+              {['About', 'Projects', 'Skills', 'Contact'].map((link) => (
+                <li key={link}>
+                  <Link
+                    to={link.toLowerCase()}
+                    spy={true}
+                    smooth="easeInOutQuad"
+                    offset={-70}
+                    duration={300}
+                    className="text-gray-400 hover:text-primary transition-colors cursor-pointer"
+                  >
+                    {link}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           
-          <div>
+          {/* Contact Info Section */}
+          <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2">
               <li className="text-gray-400">
                 San Francisco, California, USA
               </li>
               <li>
-                <a href="mailto:john@example.com" className="text-gray-400 hover:text-primary transition-colors">
+                <a 
+                  href="mailto:john@example.com" 
+                  className="text-gray-400 hover:text-primary transition-colors block"
+                >
                   john@example.com
                 </a>
               </li>
               <li>
-                <a href="tel:+11234567890" className="text-gray-400 hover:text-primary transition-colors">
+                <a 
+                  href="tel:+11234567890" 
+                  className="text-gray-400 hover:text-primary transition-colors block"
+                >
                   +1 (123) 456-7890
                 </a>
               </li>
@@ -125,9 +100,11 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
+        {/* Copyright Section */}
         <div className="pt-8 text-center">
-          <p className="text-gray-400 flex items-center justify-center gap-1">
-            © {currentYear} John Doe. All rights reserved. Made with <Heart size={16} className="text-red-500" /> and React.
+          <p className="text-gray-400 flex items-center justify-center gap-1 flex-wrap">
+            © {currentYear} John Doe. All rights reserved. Made with{' '}
+            <Heart size={16} className="text-red-500 mx-1" /> and React.
           </p>
         </div>
       </div>
