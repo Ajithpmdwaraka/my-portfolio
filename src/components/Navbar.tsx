@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
               duration={300}
               className="text-xl font-bold gradient-text cursor-pointer"
             >
-              JD
+              AJ
             </Link>
           </div>
           

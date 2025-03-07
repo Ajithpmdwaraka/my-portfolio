@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import { Github, Linkedin, Twitter, Heart } from 'lucide-react';
+import { Github, Linkedin, Heart } from 'lucide-react';
+import { Rss } from 'lucide-react'; // Using Rss icon as a close representation of Medium
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -19,14 +20,14 @@ const Footer: React.FC = () => {
               duration={300}
               className="text-2xl font-bold gradient-text cursor-pointer inline-block mb-4"
             >
-              John Doe
+              Ajith P M
             </Link>
             <p className="text-gray-400 mb-6 max-w-md mx-auto md:mx-0">
               A passionate Full Stack Developer with a focus on creating beautiful, functional, and user-friendly applications.
             </p>
             <div className="flex justify-center md:justify-start gap-4">
               <a 
-                href="https://github.com" 
+                href="https://github.com/Ajithpmdwaraka" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-gray-800 text-gray-300 hover:text-primary hover:neon-border transition-all duration-300"
@@ -34,7 +35,7 @@ const Footer: React.FC = () => {
                 <Github size={18} />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/ajithpmdwaraka/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-gray-800 text-gray-300 hover:text-primary hover:neon-border transition-all duration-300"
@@ -42,12 +43,12 @@ const Footer: React.FC = () => {
                 <Linkedin size={18} />
               </a>
               <a 
-                href="https://twitter.com" 
+                href="https://medium.com/@ajithpmdwaraka" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-gray-800 text-gray-300 hover:text-primary hover:neon-border transition-all duration-300"
               >
-                <Twitter size={18} />
+                <Rss size={18} />
               </a>
             </div>
           </div>
@@ -78,22 +79,22 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2">
               <li className="text-gray-400">
-                San Francisco, California, USA
+                Dwaraka, Puliyaparamb Kodunthirapully(PO), Palakkad Kerala India.
               </li>
               <li>
                 <a 
-                  href="mailto:john@example.com" 
+                  href="mailto:ajithpmdwaraka@gmail.com" 
                   className="text-gray-400 hover:text-primary transition-colors block"
                 >
-                  john@example.com
+                  ajithpmdwaraka@gmail.com
                 </a>
               </li>
               <li>
                 <a 
-                  href="tel:+11234567890" 
+                  href="tel:+919846494210" 
                   className="text-gray-400 hover:text-primary transition-colors block"
                 >
-                  +1 (123) 456-7890
+                  +91 9846494210
                 </a>
               </li>
             </ul>
@@ -103,7 +104,7 @@ const Footer: React.FC = () => {
         {/* Copyright Section */}
         <div className="pt-8 text-center">
           <p className="text-gray-400 flex items-center justify-center gap-1 flex-wrap">
-            © {currentYear} John Doe. All rights reserved. Made with{' '}
+            © {currentYear} Ajith PM. All rights reserved. Made with{' '}
             <Heart size={16} className="text-red-500 mx-1" /> and React.
           </p>
         </div>

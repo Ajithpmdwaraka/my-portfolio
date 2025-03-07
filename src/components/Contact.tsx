@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Send, Rss } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -139,19 +139,19 @@ const Contact: React.FC = () => {
                 { 
                   icon: <Mail size={20} className="text-primary" />, 
                   title: 'Email', 
-                  content: 'john@example.com',
-                  link: 'mailto:john@example.com'
+                  content: 'ajithpmdwaraka@gmail.com',
+                  link: 'mailto:ajithpmdwaraka@gmail.com'
                 },
                 { 
                   icon: <Phone size={20} className="text-primary" />, 
                   title: 'Phone', 
-                  content: '+1 (123) 456-7890',
-                  link: 'tel:+11234567890'
+                  content: '+91 9846494210',
+                  link: 'tel:+91 9846494210'
                 },
                 { 
                   icon: <MapPin size={20} className="text-primary" />, 
                   title: 'Location', 
-                  content: 'San Francisco, California, USA',
+                  content: 'Dwaraka House, Palakkad, Kerala, India',
                   link: null
                 }
               ].map((item, index) => (
@@ -189,9 +189,9 @@ const Contact: React.FC = () => {
               <h4 className="text-base md:text-lg font-semibold mb-4">Connect with me</h4>
               <div className="flex gap-3 md:gap-4">
                 {[
-                  { icon: <Github size={20} />, link: 'https://github.com' },
-                  { icon: <Linkedin size={20} />, link: 'https://linkedin.com' },
-                  { icon: <Twitter size={20} />, link: 'https://twitter.com' }
+                  { icon: <Github size={20} />, link: 'https://github.com/Ajithpmdwaraka' },
+                  { icon: <Linkedin size={20} />, link: 'https://www.linkedin.com/in/ajithpmdwaraka/' },
+                  { icon: <Rss size={20} />, link: 'https://medium.com/@ajithpmdwaraka' }
                 ].map((social, index) => (
                   <a 
                     key={index}

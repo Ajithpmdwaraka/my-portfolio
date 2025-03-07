@@ -118,15 +118,15 @@ const About: React.FC = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <p className="text-gray-400">Name:</p>
-                    <p className="font-medium">John Doe</p>
+                    <p className="font-medium">Ajith P M</p>
                   </div>
                   <div>
                     <p className="text-gray-400">Email:</p>
-                    <p className="font-medium">john@example.com</p>
+                    <p className="font-medium">ajithpmdwaraka@gmail.com</p>
                   </div>
                   <div>
                     <p className="text-gray-400">Location:</p>
-                    <p className="font-medium">San Francisco, CA</p>
+                    <p className="font-medium">Kochi, Kerala</p>
                   </div>
                   <div>
                     <p className="text-gray-400">Availability:</p>

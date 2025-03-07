@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import { ChevronDown, Github, Linkedin, Twitter, BookOpen } from 'lucide-react';
+import { ChevronDown, Github, Linkedin, BookOpen } from 'lucide-react';
 import { Link } from 'react-scroll';
 
 const Hero: React.FC = () => {
@@ -113,16 +113,13 @@ const Hero: React.FC = () => {
             transition={{ delay: 0.9, duration: 0.8 }}
             className="flex justify-center space-x-4 sm:space-x-6"
           >
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary transition-colors duration-300">
+            <a href="https://github.com/Ajithpmdwaraka" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary transition-colors duration-300">
               <Github size={20} className="sm:w-6 sm:h-6" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary transition-colors duration-300">
+            <a href="https://www.linkedin.com/in/ajithpmdwaraka/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary transition-colors duration-300">
               <Linkedin size={20} className="sm:w-6 sm:h-6" />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary transition-colors duration-300">
-              <Twitter size={20} className="sm:w-6 sm:h-6" />
-            </a>
-            <a href="https://medium.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary transition-colors duration-300">
+            <a href="https://medium.com/@ajithpmdwaraka" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary transition-colors duration-300">
               <BookOpen size={20} className="sm:w-6 sm:h-6" />
             </a>
           </motion.div>
