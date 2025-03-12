@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="max-w-xs sm:max-w-lg md:max-w-xl mx-auto text-gray-300 mb-4 text-xs sm:text-sm md:text-base"
+            className="max-w-xs sm:max-w-lg md:max-w-xl mx-auto text-gray-300 mb-4 text-xm sm:text-sm md:text-base"
           >
             I create elegant, high-performance web applications with modern technologies.
             Specializing in React, Node.js, and cutting-edge UI design.

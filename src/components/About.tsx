@@ -109,10 +109,10 @@ const About: React.FC = () => {
                 <h3 className="text-xl md:text-2xl font-bold mb-3">
                   I'm a <span className="gradient-text">Full Stack Developer</span> with a passion for creating beautiful, functional websites
                 </h3>
-                <p className="text-gray-300 mb-4 text-sm md:text-base">
+                <p className="text-gray-300 mb-4 text-xm md:text-base">
                   With over 5 years of experience in web development, I specialize in building modern, responsive, and user-friendly applications. I'm passionate about creating clean, efficient code and delivering exceptional user experiences.
                 </p>
-                <p className="text-gray-300 mb-4 text-sm md:text-base">
+                <p className="text-gray-300 mb-4 text-xm md:text-base">
                   My journey in tech began with a Computer Science degree, followed by roles at startups and established companies where I honed my skills across the full development stack. I stay current with emerging technologies and best practices to deliver cutting-edge solutions.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
