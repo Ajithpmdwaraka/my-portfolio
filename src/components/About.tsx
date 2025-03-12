@@ -46,10 +46,10 @@ const About: React.FC = () => {
   };
 
   return (
-    <section id="about" className="bg-dark py-20">
+    <section id="about" className="bg-dark py-12">
       <div className="section-container">
         <motion.h2
-          className="section-heading text-center"
+          className="section-heading text-center text-2xl md:text-3xl lg:text-4xl mb-6"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={variants}
@@ -59,7 +59,7 @@ const About: React.FC = () => {
           About Me
         </motion.h2>
         
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center mb-6">
           <div className="inline-flex p-1 rounded-full bg-gray-800">
             {tabs.map((tab) => (
               <button
@@ -77,7 +77,7 @@ const About: React.FC = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           <motion.div
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
@@ -93,7 +93,7 @@ const About: React.FC = () => {
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-primary to-secondary p-4 rounded-lg">
-                <p className="text-white font-bold">5+ Years Experience</p>
+                <p className="text-white font-bold text-sm">5+ Years Experience</p>
               </div>
             </div>
           </motion.div>
@@ -106,43 +106,43 @@ const About: React.FC = () => {
           >
             {activeTab === 'about' && (
               <div>
-                <h3 className="text-2xl font-bold mb-4">
+                <h3 className="text-xl md:text-2xl font-bold mb-3">
                   I'm a <span className="gradient-text">Full Stack Developer</span> with a passion for creating beautiful, functional websites
                 </h3>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300 mb-4 text-sm md:text-base">
                   With over 5 years of experience in web development, I specialize in building modern, responsive, and user-friendly applications. I'm passionate about creating clean, efficient code and delivering exceptional user experiences.
                 </p>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300 mb-4 text-sm md:text-base">
                   My journey in tech began with a Computer Science degree, followed by roles at startups and established companies where I honed my skills across the full development stack. I stay current with emerging technologies and best practices to deliver cutting-edge solutions.
                 </p>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
-                    <p className="text-gray-400">Name:</p>
-                    <p className="font-medium">Ajith P M</p>
+                    <p className="text-gray-400 text-sm">Name:</p>
+                    <p className="font-medium text-sm md:text-base">Ajith P M</p>
                   </div>
                   <div>
-                    <p className="text-gray-400">Email:</p>
-                    <p className="font-medium">ajithpmdwaraka@gmail.com</p>
+                    <p className="text-gray-400 text-sm">Location:</p>
+                    <p className="font-medium text-sm md:text-base">Kochi, Kerala</p>
                   </div>
-                  <div>
-                    <p className="text-gray-400">Location:</p>
-                    <p className="font-medium">Kochi, Kerala</p>
+                  <div className="sm:col-span-2">
+                    <p className="text-gray-400 text-sm">Email:</p>
+                    <p className="font-medium text-sm md:text-base truncate">ajithpmdwaraka@gmail.com</p>
                   </div>
-                  <div>
-                    <p className="text-gray-400">Availability:</p>
-                    <p className="font-medium text-green-500">Available for hire</p>
+                  <div className="sm:col-span-2">
+                    <p className="text-gray-400 text-sm">Availability:</p>
+                    <p className="font-medium text-green-500 text-sm md:text-base">Available for hire</p>
                   </div>
                 </div>
               </div>
             )}
             
             {activeTab === 'services' && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {services.map((service, index) => (
-                  <div key={index} className="glass-card p-6 transition-all duration-300 hover:neon-border">
-                    <div className="mb-4">{service.icon}</div>
-                    <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                    <p className="text-gray-400">{service.description}</p>
+                  <div key={index} className="glass-card p-4 transition-all duration-300 hover:neon-border">
+                    <div className="mb-3">{service.icon}</div>
+                    <h3 className="text-lg md:text-xl font-bold mb-2">{service.title}</h3>
+                    <p className="text-gray-400 text-sm md:text-base">{service.description}</p>
                   </div>
                 ))}
               </div>
@@ -150,33 +150,33 @@ const About: React.FC = () => {
             
             {activeTab === 'expertise' && (
               <div>
-                <h3 className="text-xl font-bold mb-4">Technical Expertise</h3>
-                <p className="text-gray-300 mb-6">
+                <h3 className="text-lg md:text-xl font-bold mb-3">Technical Expertise</h3>
+                <p className="text-gray-300 mb-4 text-sm md:text-base">
                   I specialize in full-stack development with expertise in both frontend and backend technologies. My technical skills include:
                 </p>
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-2 mb-4">
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-primary"></span>
-                    <span>Frontend: React, Next.js, Vue.js, TypeScript</span>
+                    <span className="text-sm md:text-base">Frontend: React, Next.js, Vue.js, TypeScript</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-primary"></span>
-                    <span>Backend: Node.js, Express, Django, Laravel</span>
+                    <span className="text-sm md:text-base">Backend: Node.js, Express, Django, Laravel</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-primary"></span>
-                    <span>Database: MongoDB, PostgreSQL, MySQL, Firebase</span>
+                    <span className="text-sm md:text-base">Database: MongoDB, PostgreSQL, MySQL, Firebase</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-primary"></span>
-                    <span>DevOps: Docker, AWS, CI/CD, Git</span>
+                    <span className="text-sm md:text-base">DevOps: Docker, AWS, CI/CD, Git</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-primary"></span>
-                    <span>Design: Figma, Adobe XD, UI/UX principles</span>
+                    <span className="text-sm md:text-base">Design: Figma, Adobe XD, UI/UX principles</span>
                   </li>
                 </ul>
-                <p className="text-gray-300">
+                <p className="text-gray-300 text-sm md:text-base">
                   I'm constantly learning and adapting to new technologies to stay at the forefront of web development.
                 </p>
               </div>
