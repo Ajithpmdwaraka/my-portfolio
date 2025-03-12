@@ -150,7 +150,7 @@ const About: React.FC = () => {
             
             {activeTab === 'expertise' && (
               <div>
-                <h3 className="text-2xl font-bold mb-4">Technical Expertise</h3>
+                <h3 className="text-xl font-bold mb-4">Technical Expertise</h3>
                 <p className="text-gray-300 mb-6">
                   I specialize in full-stack development with expertise in both frontend and backend technologies. My technical skills include:
                 </p>

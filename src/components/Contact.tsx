@@ -233,7 +233,7 @@ const Contact: React.FC = () => {
                     name: 'name', 
                     label: 'Your Name', 
                     type: 'text', 
-                    placeholder: 'John Doe' 
+                    placeholder: 'Your Name' 
                   },
                   { 
                     name: 'email', 

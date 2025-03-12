@@ -104,8 +104,8 @@ const Footer: React.FC = () => {
         {/* Copyright Section */}
         <div className="pt-8 text-center">
           <p className="text-gray-400 flex items-center justify-center gap-1 flex-wrap">
-            © {currentYear} Ajith PM. All rights reserved. Made with{' '}
-            <Heart size={16} className="text-red-500 mx-1" /> and React.
+            © {currentYear} All rights reserved. Made with{' '}
+            <Heart size={16} className="text-red-500 mx-1" /> and React by Ajith P M.
           </p>
         </div>
       </div>
