@@ -25,7 +25,7 @@ const projects = [
     image: PKS,
     description: 'A task management application with drag-and-drop functionality, user authentication, and real-time updates. Built with React, Firebase, and Tailwind CSS.',
     technologies: ['React', 'Firebase', 'Tailwind CSS', 'React DnD'],
-    liveLink: 'https://example.com',
+    liveLink: 'https://www.poonakeralasamajam.co.in/',
     githubLink: 'https://github.com',
   },
   {
@@ -43,7 +43,7 @@ const projects = [
     image: SCS,
     description: 'A weather dashboard that displays current weather conditions and forecasts for multiple locations. Built with React and the OpenWeatherMap API.',
     technologies: ['React', 'OpenWeatherMap API', 'Chart.js', 'Tailwind CSS'],
-    liveLink: 'https://example.com',
+    liveLink: 'https://swiftcraftingsolutions.vercel.app/',
     githubLink: 'https://github.com',
   },
   {
@@ -61,7 +61,7 @@ const projects = [
     image: CoreStone,
     description: 'A fitness tracking application that allows users to track workouts, set goals, and view progress. Built with React Native and Firebase.',
     technologies: ['React Native', 'Firebase', 'Redux', 'Expo'],
-    liveLink: 'https://example.com',
+    liveLink: 'https://www.corestone.in/',
     githubLink: 'https://github.com',
   },
 ];
