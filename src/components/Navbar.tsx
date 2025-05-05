@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 import { Menu, X, Download } from 'lucide-react';
-import MyResume from '../assests/AjithPM-resume.pdf';
+import MyResume from '../assests/Ajith PM-Resume[May 2025].pdf';
 
 const navItems = [
   { name: 'Home', to: 'hero' },
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
               
               <a
                 href={MyResume}
-                download="AjithPM-resume.pdf"
+                download="Ajith PM-Resume[May 2025].pdf"
                 className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary to-secondary text-white text-sm font-medium hover:opacity-90 transition-opacity"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -120,7 +120,7 @@ const Navbar: React.FC = () => {
             
             <a
               href={MyResume}
-              download="AjithPM-resume.pdf"
+              download="Ajith-PM-Resume"
               className="flex items-center gap-2 px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800"
               target="_blank" 
               rel="noopener noreferrer"

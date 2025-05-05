@@ -72,8 +72,7 @@ const Hero: React.FC = () => {
             transition={{ delay: 0.7, duration: 0.8 }}
             className="max-w-xs sm:max-w-lg md:max-w-xl mx-auto text-gray-300 mb-4 text-xm sm:text-sm md:text-base"
           >
-            I create elegant, high-performance web applications with modern technologies.
-            Specializing in React, Node.js, and cutting-edge UI design.
+            I craft elegant, high-performance web applications using modern technologies, with expertise in React, Node.js, Django, FastAPI, and AWS, delivering seamless functionality, robust API development, and exceptional frontend and backend solutions.
           </motion.p>
           
           <motion.div
