@@ -9,14 +9,14 @@ const experiences = [
     company: 'Seeroo IT Solutions',
     period: 'Jan 2025 - Apr 2025',
     description:
-      'Architected a Django REST API backend for PhotoFish, an AI-powered facial recognition platform. Integrated AWS Rekognition for facial detection, implemented OAuth and OTP-based authentication, and designed secure, high-performance RESTful APIs.',
+      'Architected a Django REST API backend for PhotoFish, an AI-powered facial recognition platform. Integrated AWS Rekognition for facial detection, implemented OAuth and OTP-based authentication, and designed secure, high-performance RESTful APIs. Implemented CI/CD pipelines and connected the backend to a PostgreSQL database for robust and scalable data management. Thoroughly tested all endpoints using Postman and documented the API with Swagger for seamless developer collaboration',
   },
   {
     title: 'Software Developer Intern',
     company: 'N-OMS Consultancy Pvt Ltd',
     period: 'Apr 2024 - Sep 2024',
     description:
-      'Developed responsive web applications using React and TypeScript. Built the Pune Keeraleeya Samaj platform from scratch and contributed a feature-rich Calendar Component to a large-scale Office Management System with seamless API integration.',
+      'Developed dynamic and responsive web applications using React and TypeScript. Spearheaded the development of the Pune Keeraleeya Samaj platform from the ground up, delivering a clean and scalable architecture. Contributed a robust, feature-rich Calendar Component to a large-scale Office Management System, integrating it seamlessly with backend APIs for real-time data interaction and improved user engagement',
   }
 ];
 
