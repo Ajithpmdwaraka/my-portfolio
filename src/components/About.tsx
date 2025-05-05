@@ -157,27 +157,28 @@ const About: React.FC = () => {
                 <ul className="space-y-2 mb-4">
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-primary"></span>
-                    <span className="text-sm md:text-base">Frontend: React, Next.js, Vue.js, TypeScript</span>
+                    <span className="text-sm md:text-base">Languages: Python, JavaScript, TypeScript, SQL</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-primary"></span>
-                    <span className="text-sm md:text-base">Backend: Node.js, Express, Django, Laravel</span>
+                    <span className="text-sm md:text-base">Frontend: React.js, Tailwind CSS, Ant Design, Framer Motion, AOS, Three.js</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-primary"></span>
-                    <span className="text-sm md:text-base">Database: MongoDB, PostgreSQL, MySQL, Firebase</span>
+                    <span className="text-sm md:text-base">Backend: Django, DRF, FastAPI, REST APIs, ORM, Swagger, JWT, Redis
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-primary"></span>
+                    <span className="text-sm md:text-base">Database: PostgreSQL, MongoDB, MySQL</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-primary"></span>
                     <span className="text-sm md:text-base">DevOps: Docker, AWS, CI/CD, Git</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-primary"></span>
-                    <span className="text-sm md:text-base">Design: Figma, Adobe XD, UI/UX principles</span>
-                  </li>
                 </ul>
                 <p className="text-gray-300 text-sm md:text-base">
-                  I'm constantly learning and adapting to new technologies to stay at the forefront of web development.
+                  I'm constantly learning and adapting to new technologies to stay at the forefront of software development.
                 </p>
               </div>
             )}
