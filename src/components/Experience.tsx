@@ -5,33 +5,19 @@ import { Briefcase } from 'lucide-react';
 
 const experiences = [
   {
-    title: 'Senior Frontend Developer',
-    company: 'Tech Innovations Inc.',
-    period: '2021 - Present',
+    title: 'Software Developer Intern',
+    company: 'Seeroo IT Solutions',
+    period: 'Jan 2025 - Apr 2025',
     description:
-      'Lead the frontend development team in building modern web applications using React and TypeScript. Implemented CI/CD pipelines and improved performance by 40%.',
+      'Architected a Django REST API backend for PhotoFish, an AI-powered facial recognition platform. Integrated AWS Rekognition for facial detection, implemented OAuth and OTP-based authentication, and designed secure, high-performance RESTful APIs.',
   },
   {
-    title: 'Full Stack Developer',
-    company: 'Digital Solutions LLC',
-    period: '2019 - 2021',
+    title: 'Software Developer Intern',
+    company: 'N-OMS Consultancy Pvt Ltd',
+    period: 'Apr 2024 - Sep 2024',
     description:
-      'Developed and maintained full-stack applications using React, Node.js, and MongoDB. Collaborated with UX designers to implement responsive designs and interactive features.',
-  },
-  {
-    title: 'Web Developer',
-    company: 'Creative Agency',
-    period: '2017 - 2019',
-    description:
-      'Built client websites using HTML, CSS, JavaScript, and WordPress. Worked directly with clients to gather requirements and implement solutions that met their needs.',
-  },
-  {
-    title: 'Junior Developer',
-    company: 'Startup Hub',
-    period: '2016 - 2017',
-    description:
-      'Assisted in the development of web applications and gained experience with modern frontend frameworks and backend technologies.',
-  },
+      'Developed responsive web applications using React and TypeScript. Built the Pune Keeraleeya Samaj platform from scratch and contributed a feature-rich Calendar Component to a large-scale Office Management System with seamless API integration.',
+  }
 ];
 
 const Experience: React.FC = () => {
