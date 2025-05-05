@@ -12,27 +12,27 @@ import CoreStone from '../assests/corestone.png';
 const projects = [
   {
     title: 'ToyClub E-Commerce Platform',
-    category: 'Web Development',
+    category: 'Freelance Projects',
     image: ToyClub,
-    description: 'A full-featured e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment processing.',
+    description: 'A modern web application for ToyClub, a wholesale toy seller, built with React and Tailwind CSS. Features include product showcase, animated homepage, responsive design, and intuitive navigation for customers',
     technologies: ['React', 'Typescript', 'Three.js', 'Supabase', 'Framer-Motion'],
     liveLink: 'https://toyclub-wholesale-whisper.vercel.app/',
     githubLink: 'https://github.com',
   },
   {
     title: 'Poona Keraleeya Samaj',
-    category: 'Web Application',
+    category: 'Live Projects',
     image: PKS,
-    description: 'A task management application with drag-and-drop functionality, user authentication, and real-time updates. Built with React, Firebase, and Tailwind CSS.',
-    technologies: ['React', 'Firebase', 'Tailwind CSS', 'React DnD'],
+    description: 'A responsive web application for Poona Keraleeya Samaj built with React and Tailwind CSS, featuring event listings, gallery carousel, history and activity pages, and detailed committee information display.',
+    technologies: ['React', 'Tailwind CSS', 'AOS'],
     liveLink: 'https://www.poonakeralasamajam.co.in/',
     githubLink: 'https://github.com',
   },
   {
     title: 'Portfolio Website',
-    category: 'Web Design',
+    category: 'Web Application',
     image: PortFolio,
-    description: 'A modern portfolio website with smooth animations, responsive design, and dark mode. Built with Next.js and Framer Motion.',
+    description: 'A modern portfolio website with smooth animations, responsive design, and dark mode. Built with React.ts and Framer Motion.',
     technologies: ['React.js', 'Framer Motion', 'Tailwind CSS', 'TypeScript'],
     liveLink: 'ajithpm.vercel.app',
     githubLink: 'https://github.com/Ajithpmdwaraka/my-portfolio',
@@ -41,32 +41,32 @@ const projects = [
     title: 'SwiftCrafting Solutions',
     category: 'Web Application',
     image: SCS,
-    description: 'A weather dashboard that displays current weather conditions and forecasts for multiple locations. Built with React and the OpenWeatherMap API.',
-    technologies: ['React', 'OpenWeatherMap API', 'Chart.js', 'Tailwind CSS'],
+    description: 'Built a modern web application for SwiftCrafting Solutions, a software development company, using React, Tailwind CSS, and Framer Motion. Delivered a sleek, animated UI with responsive, component-driven architecture',
+    technologies: ['React', 'Typescript', 'Framer-Motion', 'Locomotive-Scroll'],
     liveLink: 'https://swiftcraftingsolutions.vercel.app/',
     githubLink: 'https://github.com',
   },
   {
     title: 'PhotoFish-AI',
-    category: 'Full Stack',
+    category: 'Backend',
     image: PhotoFish,
-    description: 'A blog platform with user authentication, markdown support, and comment functionality. Built with Next.js, Prisma, and PostgreSQL.',
-    technologies: ['Next.js', 'Prisma', 'PostgreSQL', 'Tailwind CSS'],
+    description: 'Built the complete backend for PhotoFish AI, a facial recognition app, using Django, DRF, PostgreSQL, and AWS. Integrated AWS Rekognition for face detection and cloud-based image processing capabilities',
+    technologies: ['Django', 'DRF', 'PostgreSql', 'AWS'],
     liveLink: 'https://example.com',
     githubLink: 'https://github.com',
   },
   {
     title: 'CoreStone Innovations',
-    category: 'Mobile App',
+    category: 'Live Projects',
     image: CoreStone,
-    description: 'A fitness tracking application that allows users to track workouts, set goals, and view progress. Built with React Native and Firebase.',
-    technologies: ['React Native', 'Firebase', 'Redux', 'Expo'],
+    description: 'Developed a web application for Corestone Innovations, a Kochi-based startup, using React and Tailwind CSS. Focused on delivering responsive design, intuitive UI, and custom components tailored to business needs.',
+    technologies: ['React', 'JavaScript', 'Tailwind'],
     liveLink: 'https://www.corestone.in/',
     githubLink: 'https://github.com',
   },
 ];
 
-const categories = ['All', 'Web Development', 'Web Application', 'Web Design', 'Full Stack', 'Mobile App'];
+const categories = ['All', 'Web Application', 'Live Projects', 'Backend', 'Freelance Projects'];
 
 const Projects: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
