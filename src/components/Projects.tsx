@@ -2,21 +2,27 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ExternalLink, Github, X } from 'lucide-react';
+import ToyClub from '../assests/toyclub.png';
+import PortFolio from '../assests/portfolio.png';
+import PKS from '../assests/PKS.png';
+import SCS from '../assests/SCS.png';
+import PhotoFish from '../assests/photofish.png'
+import CoreStone from '../assests/corestone.png';
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
+    title: 'ToyClub E-Commerce Platform',
     category: 'Web Development',
-    image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80',
+    image: ToyClub,
     description: 'A full-featured e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment processing.',
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe'],
-    liveLink: 'https://example.com',
+    technologies: ['React', 'Typescript', 'Three.js', 'Supabase', 'Framer-Motion'],
+    liveLink: 'https://toyclub-wholesale-whisper.vercel.app/',
     githubLink: 'https://github.com',
   },
   {
-    title: 'Task Management App',
+    title: 'Poona Keraleeya Samaj',
     category: 'Web Application',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+    image: PKS,
     description: 'A task management application with drag-and-drop functionality, user authentication, and real-time updates. Built with React, Firebase, and Tailwind CSS.',
     technologies: ['React', 'Firebase', 'Tailwind CSS', 'React DnD'],
     liveLink: 'https://example.com',
@@ -25,34 +31,34 @@ const projects = [
   {
     title: 'Portfolio Website',
     category: 'Web Design',
-    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80',
+    image: PortFolio,
     description: 'A modern portfolio website with smooth animations, responsive design, and dark mode. Built with Next.js and Framer Motion.',
-    technologies: ['Next.js', 'Framer Motion', 'Tailwind CSS', 'TypeScript'],
-    liveLink: 'https://example.com',
-    githubLink: 'https://github.com',
+    technologies: ['React.js', 'Framer Motion', 'Tailwind CSS', 'TypeScript'],
+    liveLink: 'ajithpm.vercel.app',
+    githubLink: 'https://github.com/Ajithpmdwaraka/my-portfolio',
   },
   {
-    title: 'Weather Dashboard',
+    title: 'SwiftCrafting Solutions',
     category: 'Web Application',
-    image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1065&q=80',
+    image: SCS,
     description: 'A weather dashboard that displays current weather conditions and forecasts for multiple locations. Built with React and the OpenWeatherMap API.',
     technologies: ['React', 'OpenWeatherMap API', 'Chart.js', 'Tailwind CSS'],
     liveLink: 'https://example.com',
     githubLink: 'https://github.com',
   },
   {
-    title: 'Blog Platform',
+    title: 'PhotoFish-AI',
     category: 'Full Stack',
-    image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+    image: PhotoFish,
     description: 'A blog platform with user authentication, markdown support, and comment functionality. Built with Next.js, Prisma, and PostgreSQL.',
     technologies: ['Next.js', 'Prisma', 'PostgreSQL', 'Tailwind CSS'],
     liveLink: 'https://example.com',
     githubLink: 'https://github.com',
   },
   {
-    title: 'Fitness Tracker',
+    title: 'CoreStone Innovations',
     category: 'Mobile App',
-    image: 'https://images.unsplash.com/photo-1461773518188-b3e86f98242f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80',
+    image: CoreStone,
     description: 'A fitness tracking application that allows users to track workouts, set goals, and view progress. Built with React Native and Firebase.',
     technologies: ['React Native', 'Firebase', 'Redux', 'Expo'],
     liveLink: 'https://example.com',
