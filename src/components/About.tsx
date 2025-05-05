@@ -93,7 +93,7 @@ const About: React.FC = () => {
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-primary to-secondary p-4 rounded-lg">
-                <p className="text-white font-bold text-sm">5+ Years Experience</p>
+                <p className="text-white font-bold text-sm">Available for hire</p>
               </div>
             </div>
           </motion.div>
@@ -110,10 +110,10 @@ const About: React.FC = () => {
                   I'm a <span className="gradient-text">Full Stack Developer</span> with a passion for creating beautiful, functional websites
                 </h3>
                 <p className="text-gray-300 mb-4 text-xm md:text-base">
-                  With over 5 years of experience in web development, I specialize in building modern, responsive, and user-friendly applications. I'm passionate about creating clean, efficient code and delivering exceptional user experiences.
+                I'm a results-driven Software Developer with a postgraduate degree in Software Application Development. Specializing in full-stack development, I build scalable, user-centric applications using modern frontend and backend technologies. With impactful internship experience, I’ve architected secure Django REST APIs, integrated AWS Rekognition, and developed responsive React applications.
                 </p>
                 <p className="text-gray-300 mb-4 text-xm md:text-base">
-                  My journey in tech began with a Computer Science degree, followed by roles at startups and established companies where I honed my skills across the full development stack. I stay current with emerging technologies and best practices to deliver cutting-edge solutions.
+                Proficient in Python, JavaScript, TypeScript, React, Django, and AWS, I’m passionate about solving complex problems with elegant solutions, thriving in collaborative environments, and delivering exceptional, innovative projects.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
