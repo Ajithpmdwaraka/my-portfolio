@@ -6,38 +6,38 @@ import { GraduationCap, Award, BookOpen } from 'lucide-react';
 const educationItems = [
   {
     icon: <GraduationCap size={24} className="text-primary" />,
-    degree: 'Master of Science in Computer Science',
-    institution: 'Stanford University',
-    period: '2014 - 2016',
-    description: 'Specialized in Human-Computer Interaction and Machine Learning. Graduated with honors.',
+    degree: 'Masters in Software Application Development',
+    institution: 'Cochin University Of Science And Technology',
+    period: '2023 - 2025',
+    description: 'Developed advanced skills in full-stack development and system design. Focused on real-world applications.',
   },
   {
     icon: <GraduationCap size={24} className="text-primary" />,
     degree: 'Bachelor of Science in Computer Science',
-    institution: 'University of California, Berkeley',
-    period: '2010 - 2014',
-    description: 'Focused on software engineering and web development. Participated in multiple hackathons.',
+    institution: 'Calicut University',
+    period: '2020 - 2023',
+    description: 'Studied programming, OOP, DSA, and core computer science. Built a strong technical foundation.',
   },
 ];
 
 const certifications = [
   {
     icon: <Award size={24} className="text-primary" />,
-    title: 'AWS Certified Solutions Architect',
-    issuer: 'Amazon Web Services',
-    date: '2022',
+    title: 'NPTEL Blockchain and its Applications',
+    issuer: 'IIT Kharagpur',
+    date: '2024',
   },
   {
     icon: <Award size={24} className="text-primary" />,
-    title: 'Google Professional Cloud Developer',
-    issuer: 'Google Cloud',
-    date: '2021',
+    title: 'Python Programming: The Complete Course',
+    issuer: 'Udemy',
+    date: '2025',
   },
   {
     icon: <Award size={24} className="text-primary" />,
-    title: 'React Advanced Certification',
-    issuer: 'Meta',
-    date: '2020',
+    title: 'Data Structure Using Python 2025',
+    issuer: 'Udemy',
+    date: '2025',
   },
 ];
 
@@ -132,28 +132,6 @@ const Education: React.FC = () => {
                   <p className="text-sm text-primary font-medium">{cert.date}</p>
                 </motion.div>
               ))}
-              
-              <motion.div
-                className="glass-card p-6 hover:neon-border transition-all duration-300"
-                variants={itemVariants}
-                transition={{ duration: 0.5 }}
-              >
-                <h4 className="text-xl font-bold mb-3">Additional Courses</h4>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-primary"></span>
-                    <span className="text-gray-300">Advanced JavaScript - Udemy</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-primary"></span>
-                    <span className="text-gray-300">UI/UX Design Fundamentals - Coursera</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-primary"></span>
-                    <span className="text-gray-300">Data Structures & Algorithms - MIT OpenCourseWare</span>
-                  </li>
-                </ul>
-              </motion.div>
             </div>
           </motion.div>
         </div>
