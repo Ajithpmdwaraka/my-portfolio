@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Code, Palette, Lightbulb, Rocket } from 'lucide-react';
+import { Code, Server, Layout, Cloud } from 'lucide-react';
 import ajithPhoto from '../assests/ajith-photo.jpg'
 
 const tabs = [
@@ -13,23 +13,23 @@ const tabs = [
 const services = [
   {
     icon: <Code size={24} className="text-primary" />,
-    title: 'Web Development',
-    description: 'Building responsive, accessible, and performant web applications using modern technologies.',
+    title: 'Full-Stack Development',
+    description: 'Building scalable, user-centric web applications using React, TypeScript, Django, and FastAPI, with seamless frontend and backend integration',
   },
   {
-    icon: <Palette size={24} className="text-primary" />,
-    title: 'UI/UX Design',
-    description: 'Creating intuitive and visually appealing user interfaces with a focus on user experience.',
+    icon: <Server size={24} className="text-primary" />,
+    title: 'API Development',
+    description: 'Designing secure, high-performance RESTful APIs with Django REST Framework.',
   },
   {
-    icon: <Lightbulb size={24} className="text-primary" />,
-    title: 'Consultation',
-    description: 'Providing expert advice on technology choices, architecture, and best practices.',
+    icon: <Layout size={24} className="text-primary" />,
+    title: 'Responsive Frontend Design',
+    description: 'Crafting intuitive, responsive, and engaging user interfaces using React, and animation libraries like Framer Motion and Three.js.',
   },
   {
-    icon: <Rocket size={24} className="text-primary" />,
-    title: 'Performance Optimization',
-    description: 'Improving application speed, responsiveness, and overall performance.',
+    icon: <Cloud size={24} className="text-primary" />,
+    title: 'DevOps & Deployment',
+    description: 'Implementing CI/CD pipelines, Docker, and AWS deployments to ensure efficient, scalable, and production-ready application delivery.',
   },
 ];
 
