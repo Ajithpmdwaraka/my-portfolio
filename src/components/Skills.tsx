@@ -1,80 +1,102 @@
-import React from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Code, Server, Database, Layout, Figma, GitBranch } from 'lucide-react';
+import { 
+  Code, 
+  Server, 
+  Database, 
+  Layout, 
+  Terminal, 
+  Globe,
+  Star
+} from 'lucide-react';
 
 const skillCategories = [
   {
-    name: 'Frontend',
+    name: 'Languages',
     icon: <Code size={24} className="text-primary" />,
     skills: [
-      { name: 'React', level: 90 },
-      { name: 'TypeScript', level: 85 },
-      { name: 'Next.js', level: 80 },
-      { name: 'Vue.js', level: 75 },
-      { name: 'HTML/CSS', level: 95 },
-      { name: 'Tailwind CSS', level: 90 },
+      { name: 'JavaScript', level: 'Advanced' },
+      { name: 'TypeScript', level: 'Advanced' },
+      { name: 'Python', level: 'Advanced' },
+      { name: 'SQL', level: 'Advanced' },
+      { name: 'HTML/CSS', level: 'Expert' },
+    ],
+  },
+  {
+    name: 'Frontend',
+    icon: <Layout size={24} className="text-primary" />,
+    skills: [
+      { name: 'React.js', level: 'Advanced' },
+      { name: 'Next.js', level: 'Advanced' },
+      { name: 'Tailwind CSS', level: 'Advanced' },
+      { name: 'Ant Design', level: 'Proficient' },
+      { name: 'Framer Motion', level: 'Advanced' },
+      { name: 'Three.js', level: 'Proficient' },
+      { name: 'AOS', level: 'Proficient' },
     ],
   },
   {
     name: 'Backend',
     icon: <Server size={24} className="text-primary" />,
     skills: [
-      { name: 'Node.js', level: 85 },
-      { name: 'Express', level: 80 },
-      { name: 'Django', level: 70 },
-      { name: 'Laravel', level: 65 },
-      { name: 'GraphQL', level: 75 },
-      { name: 'REST API', level: 90 },
+      { name: 'Django', level: 'Advanced' },
+      { name: 'Django Rest Framework', level: 'Advanced' },
+      { name: 'FastAPI', level: 'Proficient' },
+      { name: 'REST APIs', level: 'Advanced' },
+      { name: 'JWT', level: 'Advanced' },
+      { name: 'ORM', level: 'Advanced' },
+      { name: 'Redis', level: 'Proficient' },
+      { name: 'Swagger', level: 'Proficient' },
     ],
   },
   {
     name: 'Database',
     icon: <Database size={24} className="text-primary" />,
     skills: [
-      { name: 'MongoDB', level: 85 },
-      { name: 'PostgreSQL', level: 80 },
-      { name: 'MySQL', level: 75 },
-      { name: 'Firebase', level: 85 },
-      { name: 'Redis', level: 70 },
+      { name: 'PostgreSQL', level: 'Advanced' },
+      { name: 'MongoDB', level: 'Advanced' },
+      { name: 'MySQL', level: 'Advanced' },
     ],
   },
   {
-    name: 'Design',
-    icon: <Layout size={24} className="text-primary" />,
+    name: 'Tools & Platforms',
+    icon: <Terminal size={24} className="text-primary" />,
     skills: [
-      { name: 'Figma', level: 85 },
-      { name: 'Adobe XD', level: 75 },
-      { name: 'UI/UX', level: 80 },
-      { name: 'Responsive Design', level: 90 },
-      { name: 'Wireframing', level: 85 },
+      { name: 'Git/GitHub', level: 'Advanced' },
+      { name: 'Docker', level: 'Advanced' },
+      { name: 'AWS', level: 'Proficient' },
+      { name: 'CI/CD', level: 'Proficient' },
+      { name: 'Postman', level: 'Advanced' },
+      { name: 'Vercel', level: 'Advanced' },
+      { name: 'Netlify', level: 'Advanced' },
+      { name: 'NPM/Yarn', level: 'Advanced' },
+      { name: 'Poetry', level: 'Proficient' },
     ],
   },
   {
-    name: 'Tools',
-    icon: <Figma size={24} className="text-primary" />,
+    name: 'Other',
+    icon: <Globe size={24} className="text-primary" />,
     skills: [
-      { name: 'VS Code', level: 95 },
-      { name: 'Webpack', level: 80 },
-      { name: 'Vite', level: 85 },
-      { name: 'Jest', level: 75 },
-      { name: 'Cypress', level: 70 },
-    ],
-  },
-  {
-    name: 'DevOps',
-    icon: <GitBranch size={24} className="text-primary" />,
-    skills: [
-      { name: 'Git', level: 90 },
-      { name: 'Docker', level: 75 },
-      { name: 'AWS', level: 70 },
-      { name: 'CI/CD', level: 80 },
-      { name: 'Netlify/Vercel', level: 85 },
+      { name: 'AI/ML', level: 'Proficient' },
+      { name: 'Agile & Scrum', level: 'Advanced' },
+      { name: 'Jira', level: 'Proficient' },
+      { name: 'Responsive Design', level: 'Advanced' },
     ],
   },
 ];
 
-const Skills: React.FC = () => {
+// Mapping for skill level to number of filled stars
+const levelToStars: Record<string, number> = {
+  'Expert': 5,
+  'Advanced': 4,
+  'Proficient': 3,
+  'Intermediate': 2,
+  'Beginner': 1
+};
+
+const Skills = () => {
+  const [activeCategory, setActiveCategory] = useState(0);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -108,44 +130,67 @@ const Skills: React.FC = () => {
           Skills & Expertise
         </motion.h2>
         
+        {/* Category Tabs */}
+        <motion.div 
+          className="flex flex-wrap justify-center gap-3 mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          {skillCategories.map((category, index) => (
+            <motion.button
+              key={index}
+              className={`px-4 py-2 rounded-full flex items-center gap-2 transition-all duration-300 ${
+                activeCategory === index 
+                  ? 'bg-gradient-to-r from-primary to-secondary text-white shadow-lg' 
+                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+              }`}
+              onClick={() => setActiveCategory(index)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="hidden sm:block">{category.icon}</span>
+              <span>{category.name}</span>
+            </motion.button>
+          ))}
+        </motion.div>
+        
+        {/* Skills Display */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16"
+          className="mt-12 glass-card p-8"
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
         >
-          {skillCategories.map((category, index) => (
-            <motion.div
-              key={index}
-              className="glass-card p-6 hover:neon-border transition-all duration-300"
-              variants={itemVariants}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="flex items-center gap-3 mb-6">
-                {category.icon}
-                <h3 className="text-xl font-bold">{category.name}</h3>
-              </div>
-              
-              <div className="space-y-4">
-                {category.skills.map((skill, i) => (
-                  <div key={i}>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-gray-300">{skill.name}</span>
-                      <span className="text-gray-400">{skill.level}%</span>
-                    </div>
-                    <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
-                      <motion.div
-                        className="h-full bg-gradient-to-r from-primary to-secondary"
-                        initial={{ width: 0 }}
-                        animate={inView ? { width: `${skill.level}%` } : { width: 0 }}
-                        transition={{ duration: 1, delay: 0.2 + (i * 0.1) }}
-                      ></motion.div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {skillCategories[activeCategory].skills.map((skill, i) => (
+              <motion.div
+                key={i}
+                className="flex flex-col p-4 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 backdrop-blur-sm transition-all duration-300 hover:shadow-md hover:shadow-primary/20"
+                variants={itemVariants}
+                transition={{ duration: 0.5 }}
+                whileHover={{ scale: 1.03 }}
+              >
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium text-lg text-white">{skill.name}</span>
+                  <span className="text-sm text-primary">{skill.level}</span>
+                </div>
+                <div className="flex mt-1">
+                  {[...Array(5)].map((_, starIndex) => (
+                    <Star
+                      key={starIndex}
+                      size={16}
+                      className={`${
+                        starIndex < levelToStars[skill.level]
+                          ? 'text-primary fill-primary'
+                          : 'text-gray-600'
+                      } mr-1`}
+                    />
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
         </motion.div>
         
         <motion.div
