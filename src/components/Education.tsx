@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { GraduationCap, Award, BookOpen } from 'lucide-react';
+import { GraduationCap, Award, BookOpen, ExternalLink } from 'lucide-react';
 
 const educationItems = [
   {
@@ -26,18 +26,21 @@ const certifications = [
     title: 'NPTEL Blockchain and its Applications',
     issuer: 'IIT Kharagpur',
     date: '2024',
+    url: 'https://drive.google.com/file/d/1dyFrXsaQjMvs2DwCinAXaNE-0fwKulld/view'
   },
   {
     icon: <Award size={24} className="text-primary" />,
     title: 'Python Programming: The Complete Course',
     issuer: 'Udemy',
     date: '2025',
+    url: 'https://www.udemy.com/certificate/UC-175657ad-5f63-4258-84e8-b5bee938816b/'
   },
   {
     icon: <Award size={24} className="text-primary" />,
     title: 'Data Structure Using Python 2025',
     issuer: 'Udemy',
     date: '2025',
+    url: 'https://udemy.com/certificate/data-structures-python'
   },
 ];
 
@@ -129,7 +132,16 @@ const Education: React.FC = () => {
                     <h4 className="text-xl font-bold">{cert.title}</h4>
                   </div>
                   <p className="text-gray-300 mb-1">{cert.issuer}</p>
-                  <p className="text-sm text-primary font-medium">{cert.date}</p>
+                  <p className="text-sm text-primary font-medium mb-2">{cert.date}</p>
+                  
+                  <a 
+                    href={cert.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-primary hover:text-primary-light transition-colors font-medium mt-2"
+                  >
+                    View Certificate <ExternalLink size={16} />
+                  </a>
                 </motion.div>
               ))}
             </div>
