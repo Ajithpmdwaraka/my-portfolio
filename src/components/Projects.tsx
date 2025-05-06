@@ -7,7 +7,7 @@ import PortFolio from '../assests/portfolio.png';
 import PKS from '../assests/PKS.png';
 import SCS from '../assests/SCS.png';
 import PhotoFish from '../assests/photofish.png'
-import CoreStone from '../assests/corestone.png';
+import SignPark from '../assests/signpark.png';
 
 const projects = [
   {
@@ -56,12 +56,12 @@ const projects = [
     githubLink: 'https://github.com',
   },
   {
-    title: 'CoreStone Innovations',
+    title: 'SignPark Solutions',
     category: 'Live Projects',
-    image: CoreStone,
-    description: 'Developed a web application for Corestone Innovations, a Kochi-based startup, using React and Tailwind CSS. Focused on delivering responsive design, intuitive UI, and custom components tailored to business needs.',
-    technologies: ['React', 'JavaScript', 'Tailwind'],
-    liveLink: 'https://www.corestone.in/',
+    image: SignPark,
+    description: 'Developed a web application for SignPark Solutions, a Qatar-based company specializing in print media and hospitality staffing, featuring responsive design, service showcase, and intuitive layout built with React and Tailwind CSS.',
+    technologies: ['React', 'JavaScript', 'TailwindCss'],
+    liveLink: 'https://www.signparksolutions.com/',
     githubLink: 'https://github.com',
   },
 ];
