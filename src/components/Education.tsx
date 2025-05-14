@@ -14,7 +14,7 @@ const educationItems = [
   {
     icon: <GraduationCap size={24} className="text-primary" />,
     degree: 'Bachelor of Science in Computer Science',
-    institution: 'Calicut University',
+    institution: 'Govt Victoria College Pkd, Calicut University',
     period: '2020 - 2023',
     description: 'Studied programming, OOP, DSA, and core computer science. Built a strong technical foundation.',
   },
